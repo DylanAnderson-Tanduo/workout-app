@@ -1,9 +1,18 @@
-const Exercises = (props) => {
+
+const Exercises = ({ exersiseList }) => {
+
+    
+      console.log(exersiseList);
+
   return (
     <div>
-        <h1>Hello world</h1>
+      {exersiseList.map((exercise, index) => {
+     return (<h1 key={index}>{exercise.name}</h1>);
+      })}
     </div>
-  )
-}
+  );
+
+
+};
 
 export default Exercises;
