@@ -1,13 +1,14 @@
 
-const Exercises = ({ exersiseList }) => {
+const Exercises = ({ exersiseList, workout }) => {
 
-    
-      console.log(exersiseList);
+  let filteredArray = exersiseList.filter((exercise) => {
+    return exercise.workout == workout;
+  })
 
   return (
     <div>
-      {exersiseList.map((exercise, index) => {
-     return (<h1 key={index}>{exercise.name}</h1>);
+      {filteredArray.map((exercise, index) => {
+        return <h1 key={index}>{exercise.name}</h1>;
       })}
     </div>
   );

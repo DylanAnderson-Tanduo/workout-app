@@ -1,4 +1,4 @@
-const AddExercise = ({ setExersiseList, exersiseList }) => {
+const AddExercise = ({ setExersiseList, exersiseList, workout }) => {
   const submitButtonHandler = (e) => {
     e.preventDefault();
     let name = e.target.elements.exerciseName.value;
@@ -12,6 +12,7 @@ const AddExercise = ({ setExersiseList, exersiseList }) => {
         name: name,
         reps: reps,
         weight: weight,
+        workout: workout,
       },
     ]);
   };
