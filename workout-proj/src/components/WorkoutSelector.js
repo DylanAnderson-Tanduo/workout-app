@@ -18,7 +18,6 @@ const WorkoutSelector = ({ setExersiseList, exercises }) => {
 
   //Handle The Buttons
   const workoutSelectorHandler = (e) => {
-    console.log(e.target.value);
     setIsWorkoutSelected(true);
     setSelctedWorkout(e.target.value);
   };
@@ -39,7 +38,7 @@ const WorkoutSelector = ({ setExersiseList, exercises }) => {
       <div>
         {isWorkoutSelected ? (
           <div>
-            <h1>Exersises</h1>
+            <h1>{selctedWorkout} Exersises</h1>
             <Exersises
               exersiseList={exercises}
               workout={selctedWorkout}

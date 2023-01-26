@@ -5,6 +5,12 @@ const AddExercise = ({ setExersiseList, exersiseList, workout }) => {
     let reps = parseInt(e.target.elements.exerciseReps.value);
     let weight = parseInt(e.target.elements.exerciseWeight.value);
 
+    //Prevents Duplicate Exercises From Being Added
+    if(exersiseList.filter(e => e.name == name).length > 0) {
+      return;
+    }
+
+
     //Update and Add to the SetExerciseList
     setExersiseList([
       ...exersiseList,
@@ -15,6 +21,8 @@ const AddExercise = ({ setExersiseList, exersiseList, workout }) => {
         workout: workout,
       },
     ]);
+
+    console.log(exersiseList);
   };
 
   return (
