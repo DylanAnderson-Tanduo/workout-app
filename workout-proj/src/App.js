@@ -6,25 +6,25 @@ function App() {
   
 const testData = [
   {
-    name: "Pull Up",
+    name: "pull up",
     reps: 12,
     weight: 155,
     workout: "pull",
   },
   {
-    name: "Bench",
+    name: "bench",
     reps: 12,
     weight: 155,
     workout: "push",
   },
   {
-    name: "Deadlift",
+    name: "deadlift",
     reps: 12,
     weight: 155,
     workout: "legs",
   },
   {
-    name: "Cable RDL",
+    name: "cable rdl",
     reps: 7,
     weight: 55,
     workout: "legs",

@@ -1,7 +1,7 @@
 const AddExercise = ({ setExersiseList, exersiseList, workout }) => {
   const submitButtonHandler = (e) => {
     e.preventDefault();
-    let name = e.target.elements.exerciseName.value;
+    let name = (e.target.elements.exerciseName.value).toLowerCase();
     let reps = parseInt(e.target.elements.exerciseReps.value);
     let weight = parseInt(e.target.elements.exerciseWeight.value);
 
