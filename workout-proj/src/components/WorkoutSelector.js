@@ -1,18 +1,23 @@
 import { useState } from "react";
 import Exersises from "./Exersises";
 import AddExersise from "./AddExersise"
+import AddWorkout from "./AddWorkout";
 
 const WorkoutSelector = ({ setExersiseList, exercises }) => {
+
+
+
+  
   //Derive the workouts from the exercises that exist
-  //May need to rework to use State, Not sure atm
   let workoutSet = new Set();
   exercises.forEach((exercise) => {
     workoutSet.add(exercise.workout);
   });
-  let workouts = Array.from(workoutSet);
+  let workoutsArray = Array.from(workoutSet);
 
-  //State for Controlling the display of the Exercises && The Selected Workout
+  //State for Controlling the display of Workouts, Exercises && The Selected Workout
   const [isWorkoutSelected, setIsWorkoutSelected] = useState(false);
+  const [workouts, setWorkouts] = useState(workoutsArray);
   const [selctedWorkout, setSelctedWorkout] = useState(workouts[0]);
   
 
@@ -35,6 +40,7 @@ const WorkoutSelector = ({ setExersiseList, exercises }) => {
           </button>
         );
       })}
+      <AddWorkout setWorkout={setWorkouts} workouts={workouts} />
       <div>
         {isWorkoutSelected ? (
           <div>
