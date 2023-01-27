@@ -1,9 +1,7 @@
-
 const Exercises = ({ exersiseList, workout }) => {
-
   let filteredArray = exersiseList.filter((exercise) => {
     return exercise.workout == workout;
-  })
+  });
 
   return (
     <div>
@@ -18,8 +16,6 @@ const Exercises = ({ exersiseList, workout }) => {
       })}
     </div>
   );
-
-
 };
 
 export default Exercises;
