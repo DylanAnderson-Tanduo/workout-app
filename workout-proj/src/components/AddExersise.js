@@ -10,6 +10,8 @@ const AddExercise = ({ setExersiseList, exersiseList, workout }) => {
       return;
     }
 
+    //Formating the name to look nice
+    name = name.charAt(0).toUpperCase() + name.slice(1);
 
     //Update and Add to the SetExerciseList
     setExersiseList([

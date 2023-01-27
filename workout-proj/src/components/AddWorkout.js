@@ -1,7 +1,10 @@
 const AddWorkout = ({setWorkout, workouts }) => {
   const submitButtonHandler = (e) => {
     e.preventDefault();
-    let workoutName = e.target.elements.workoutName.value.toLowerCase();
+    let workoutName = e.target.elements.workoutName.value;
+
+    //Formating the Name so it looks nice
+    workoutName = workoutName.charAt(0).toUpperCase() + workoutName.slice(1);
  
 
     //Prevents Duplicate Workouts From Being Added
