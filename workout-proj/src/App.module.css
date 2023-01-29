@@ -1,0 +1,15 @@
+body {
+  background-color: #474e5c;
+  margin: 0;
+}
+
+button {
+  background-color: #d62839;
+  border-radius: 10px;
+  height: 2rem;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}

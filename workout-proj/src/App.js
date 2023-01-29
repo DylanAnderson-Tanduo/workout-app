@@ -1,4 +1,5 @@
 import DisplayWorkout from "./components/DisplayWorkout";
+import styles from "./App.module.css";
 import { useState } from "react";
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
   const [exerciseList, setExerciseList] = useState(testData);
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <DisplayWorkout
         setExerciseList={setExerciseList}
         exercises={exerciseList}

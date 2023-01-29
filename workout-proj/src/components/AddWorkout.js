@@ -1,3 +1,5 @@
+import styles from "./AddWorkout.module.css";
+
 const AddWorkout = ({ setWorkout, workouts }) => {
   const submitButtonHandler = (e) => {
     e.preventDefault();
@@ -16,10 +18,11 @@ const AddWorkout = ({ setWorkout, workouts }) => {
   };
 
   return (
-    <form onSubmit={submitButtonHandler}>
-      <label htmlFor="workoutName">Workout Name: </label>
-      <input type="text" name="workoutName" id="workoutName" />
-
+    <form className={styles["workout-form"]} onSubmit={submitButtonHandler}>
+      <div>
+        <label htmlFor="workoutName">Workout Name: </label>
+        <input required type="text" name="workoutName" id="workoutName" />
+      </div>
       <button type="submit">Add</button>
     </form>
   );

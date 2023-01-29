@@ -1,7 +1,8 @@
 import { useState } from "react";
 import AddWorkout from "./AddWorkout";
-import WorkoutButtons from "./WorkoutButtons";
+import SelectWorkout from "./SelectWorkout";
 import FilteredExercises from "./FilteredExercises";
+import styles from "./DisplayWorkout.module.css";
 
 const DisplayWorkout = ({ setExerciseList, exercises }) => {
   //Derive the workouts from the exercises that currently exist
@@ -23,23 +24,24 @@ const DisplayWorkout = ({ setExerciseList, exercises }) => {
   };
 
   return (
-    <div>
-      <WorkoutButtons
+    <div className={styles.content}>
+      {isWorkoutSelected ? (
+        <div className={styles["exercise-list-container"]}>
+          <FilteredExercises
+            exercises={exercises}
+            selectedWorkout={selectedWorkout}
+            setExerciseList={setExerciseList}
+          />
+        </div>
+      ) : (
+        <h1>No Workout Selected</h1>
+      )}
+
+      <SelectWorkout
         workouts={workouts}
         workoutSelectorHandler={workoutSelectorHandler}
       />
       <AddWorkout setWorkout={setWorkouts} workouts={workouts} />
-      <hr />
-
-      {isWorkoutSelected ? (
-        <FilteredExercises
-          exercises={exercises}
-          selectedWorkout={selectedWorkout}
-          setExerciseList={setExerciseList}
-        />
-      ) : (
-        <h1>No Workout Selected</h1>
-      )}
     </div>
   );
 };

@@ -1,0 +1,55 @@
+.workout-choices {
+  margin: 25px;
+}
+
+.select-dropdown {
+  box-shadow: 0 10px 25px rgba(0, 0, 0.1, 0.3);
+  border: 0;
+  font-size: 1rem;
+  padding: 0.75em 4em 0.75em 1em;
+  color: black;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #71a9f7;
+  display: block;
+  height: 100%;
+  width: 2.5em;
+  pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+  --size: 0.6em;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid rgba(255, 255, 255, 0.5);
+
+  top: 35%;
+}
+
+.custom-arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid rgba(255, 255, 255, 0.5);
+
+  top: 65%;
+}

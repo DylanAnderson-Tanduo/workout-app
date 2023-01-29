@@ -1,16 +1,20 @@
+import styles from "./Exercises.module.css";
+
 const Exercises = ({ exerciseList, workout }) => {
   let filteredArray = exerciseList.filter((exercise) => {
     return exercise.workout == workout;
   });
 
   return (
-    <div>
+    <div className={styles["exercises-container"]}>
       {filteredArray.map((exercise, index) => {
         return (
-          <div key={index}>
+          <div className={styles.exercise} key={index}>
             <h1>{exercise.name}</h1>
-            <p>Reps: {exercise.reps}</p>
-            <p>Weight: {exercise.weight}</p>
+            <div className={styles["exercise-info"]}>
+              <p>Reps: {exercise.reps}</p>
+              <p>Weight: {exercise.weight} lbs</p>
+            </div>
           </div>
         );
       })}

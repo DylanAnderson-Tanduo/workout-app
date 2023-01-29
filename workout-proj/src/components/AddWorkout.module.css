@@ -1,0 +1,14 @@
+.workout-form {
+  background: #71a9f7;
+  width: 30vw;
+  padding-top: 25px;
+  margin-top: 25px;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+}
+
+.workout-form button {
+  margin: 15px;
+  width: 40%;
+}
