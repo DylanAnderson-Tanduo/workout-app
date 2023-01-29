@@ -1,21 +1,21 @@
-const AddExercise = ({ setExersiseList, exersiseList, workout }) => {
+const AddExercise = ({ setExerciseList, exerciseList, workout }) => {
   const submitButtonHandler = (e) => {
     e.preventDefault();
     let name = e.target.elements.exerciseName.value.toLowerCase();
     let reps = parseInt(e.target.elements.exerciseReps.value);
     let weight = parseInt(e.target.elements.exerciseWeight.value);
 
-    //Formating the name to look nice
+    //Formatting the name to look nice
     name = name.charAt(0).toUpperCase() + name.slice(1);
 
     //Prevents Duplicate Exercises From Being Added
-    if (exersiseList.filter((e) => e.name == name).length > 0) {
+    if (exerciseList.filter((e) => e.name == name).length > 0) {
       return;
     }
 
     //Update and Add to the SetExerciseList
-    setExersiseList([
-      ...exersiseList,
+    setExerciseList([
+      ...exerciseList,
       {
         name: name,
         reps: reps,

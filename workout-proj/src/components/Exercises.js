@@ -1,5 +1,5 @@
-const Exercises = ({ exersiseList, workout }) => {
-  let filteredArray = exersiseList.filter((exercise) => {
+const Exercises = ({ exerciseList, workout }) => {
+  let filteredArray = exerciseList.filter((exercise) => {
     return exercise.workout == workout;
   });
 

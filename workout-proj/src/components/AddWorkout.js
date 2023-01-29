@@ -3,7 +3,7 @@ const AddWorkout = ({ setWorkout, workouts }) => {
     e.preventDefault();
     let workoutName = e.target.elements.workoutName.value;
 
-    //Formating the Name so it looks nice
+    //Formatting the Name so it looks nice
     workoutName = workoutName.charAt(0).toUpperCase() + workoutName.slice(1);
 
     //Prevents Duplicate Workouts From Being Added

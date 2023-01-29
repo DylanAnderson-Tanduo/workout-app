@@ -3,7 +3,7 @@ import AddWorkout from "./AddWorkout";
 import WorkoutButtons from "./WorkoutButtons";
 import FilteredExercises from "./FilteredExercises";
 
-const DisplayWorkout = ({ setExersiseList, exercises }) => {
+const DisplayWorkout = ({ setExerciseList, exercises }) => {
   //Derive the workouts from the exercises that currently exist
   let workoutSet = new Set();
   exercises.forEach((exercise) => {
@@ -14,12 +14,12 @@ const DisplayWorkout = ({ setExersiseList, exercises }) => {
   //State for Controlling the display of Workouts, Exercises && The Selected Workout
   const [isWorkoutSelected, setIsWorkoutSelected] = useState(false);
   const [workouts, setWorkouts] = useState(workoutsArray);
-  const [selctedWorkout, setSelctedWorkout] = useState(workouts[0]);
+  const [selectedWorkout, setSelectedWorkout] = useState(workouts[0]);
 
   //Handler for the Workout Buttons
   const workoutSelectorHandler = (e) => {
     setIsWorkoutSelected(true);
-    setSelctedWorkout(e.target.value);
+    setSelectedWorkout(e.target.value);
   };
 
   return (
@@ -34,8 +34,8 @@ const DisplayWorkout = ({ setExersiseList, exercises }) => {
       {isWorkoutSelected ? (
         <FilteredExercises
           exercises={exercises}
-          selctedWorkout={selctedWorkout}
-          setExersiseList={setExersiseList}
+          selectedWorkout={selectedWorkout}
+          setExerciseList={setExerciseList}
         />
       ) : (
         <h1>No Workout Selected</h1>

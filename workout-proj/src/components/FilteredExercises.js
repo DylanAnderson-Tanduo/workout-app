@@ -1,16 +1,16 @@
-import Exersises from "./Exersises";
-import AddExersise from "./AddExersise";
+import Exercises from "./Exercises";
+import AddExercise from "./AddExercise";
 
-const FilteredExercises = ({ exercises, selctedWorkout, setExersiseList }) => {
+const FilteredExercises = ({ exercises, selectedWorkout, setExerciseList }) => {
   return (
     <div>
-      <h1>{selctedWorkout} Exersises</h1>
-      <Exersises exersiseList={exercises} workout={selctedWorkout}></Exersises>
+      <h1>{selectedWorkout} Exercises</h1>
+      <Exercises exerciseList={exercises} workout={selectedWorkout}></Exercises>
       <hr />
-      <AddExersise
-        setExersiseList={setExersiseList}
-        exersiseList={exercises}
-        workout={selctedWorkout}
+      <AddExercise
+        setExerciseList={setExerciseList}
+        exerciseList={exercises}
+        workout={selectedWorkout}
       />
     </div>
   );

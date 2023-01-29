@@ -29,13 +29,13 @@ function App() {
     },
   ];
 
-  const [exersiseList, setExersiseList] = useState(testData);
+  const [exerciseList, setExerciseList] = useState(testData);
 
   return (
     <div className="App">
       <DisplayWorkout
-        setExersiseList={setExersiseList}
-        exercises={exersiseList}
+        setExerciseList={setExerciseList}
+        exercises={exerciseList}
       />
     </div>
   );
